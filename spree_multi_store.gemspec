@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.version     = '0.0.2'
 
   s.summary     = 'Adds multiple store support to Spree'
-  s.description = 'Multiple Spree stores on different domains or a single domain. The project is based on spree/spree-multi-domain'
+  s.description = 'Multiple Spree stores on different domains or a single domain. The project is forked from spree/spree-multi-domain'
   s.required_ruby_version = '>= 1.8.7'
 
   s.authors           = ['Yu Wu']
