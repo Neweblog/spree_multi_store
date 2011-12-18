@@ -1,0 +1,25 @@
+
+<h1><%= t("stores") %></h1>
+
+<table class="index">
+  <thead>
+    <th><%= t("name") %></th>
+    <th><%= t("code") %></th>
+    <th><%= t("send_mails_as") %></th>
+    <th><%= t("domains") %></th>
+    <th><%= t("action") %></th>
+  </thead>
+  <tbody>
+    <% @stores.each do |store|%>
+      <tr id="<%= dom_id store %>">
+        <td width="120px"><%= store.name %></td>
+        <td width="80px"><%= store.code %></td>
+        <td width="80px"><%= store.email %></td>
+        <td width="220"><%= store.domains %></td>
+        <td width="140px">
+          <%= link_to_with_icon 'tick', t(:show), object_url(store) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+<% content_for :sidebar do %>
+  <% if "products" == @current_controller && @taxon %>
+    <%= render :partial => "shared/filters" %>
+  <% else %>
+    <%= render :partial => "shared/taxonomies" %>
+  <% end %>
+<% end %>
+<div data-hook="homepage_products">
+  <%= render :partial => 'shared/products', :locals => { :products => @products } %>
+</div>
+
