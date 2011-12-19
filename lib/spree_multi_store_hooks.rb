@@ -58,5 +58,5 @@ Deface::Override.new(
   :virtual_path => "layouts/admin",
   :name => "multi_store_admin_tab",
   :insert_bottom => "[data-hook='admin_tabs']",
-  :text => "<%= tab(:stores) %>"
+  :text => "<%= tab(:stores) %>",
   :disabled => false)
