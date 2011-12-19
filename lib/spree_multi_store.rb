@@ -45,14 +45,14 @@ ResourceController::Accessors.module_eval do
 end
 
 Spree::CurrentOrder.module_eval do
-  def current_order_with_multi_domain(create_order_if_necessary = false)
-    current_order_without_multi_domain(create_order_if_necessary)
+  def current_order_with_multi_store(create_order_if_necessary = false)
+    current_order_without_multi_store(create_order_if_necessary)
     if @current_order and current_store and @current_order.store.nil?
       @current_order.update_attribute(:store_id, current_store.id)
     end
     @current_order
   end
-  alias_method_chain :current_order, :multi_domain
+  alias_method_chain :current_order, :multi_store
 end
 
 
@@ -81,8 +81,8 @@ module SpreeBase
 
   class << self
 
-    def included_with_multi_domain(receiver)
-      included_without_multi_domain(receiver)
+    def included_with_multi_store(receiver)
+      included_without_multi_store(receiver)
 
       receiver.send :helper, 'products'
       receiver.send :helper, 'taxons'
@@ -91,7 +91,7 @@ module SpreeBase
       receiver.send :helper_method, 'current_tracker'
     end
     
-    alias_method_chain :included, :multi_domain
+    alias_method_chain :included, :multi_store
   end
 end
 
