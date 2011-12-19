@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_multi_store'
-  s.version     = '0.0.2'
+  s.version     = '0.0.1'
 
   s.summary     = 'Adds multiple store support to Spree'
   s.description = 'Multiple Spree stores on different domains or a single domain. The project is forked from spree/spree-multi-domain'
