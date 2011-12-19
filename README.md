@@ -1,7 +1,7 @@
 Multi Domain Store
 ==================
 
-This extension allows a single Spree instance to have several customer facing stores, with a single shared backend administration system (i.e. multi-store, single-vendor).
+This extension allows a single Spree instance to have several customer facing stores, with a single shared backend administration system (i.e. multi-store, multi-vendor, multi-salesperson).
 
 Current features:
 ------------------

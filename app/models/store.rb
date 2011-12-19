@@ -7,8 +7,7 @@ class Store < ActiveRecord::Base
 
   scope :default, where(:default => true)
   scope :by_domain, lambda { |domain| where("domains like ?", "%#{domain}%") }
-  
-  #wuyu: will be adapt to fit with 'domain/store/id/'
+
   def self.current(domain = nil)
     current_store = domain ? Store.by_domain(domain).first : nil
     current_store || Store.default.first

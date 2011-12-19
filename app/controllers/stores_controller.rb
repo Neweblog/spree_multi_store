@@ -13,8 +13,10 @@ class StoresController < Spree::BaseController
       request.path
     end
 
+    #####wuyu:find_by_code
     if @store = Store.find_by_code(path)
       @products = @store.products
+    #####wuyu:find_by_id
     elsif @store = Store.find(path)
       @products = @store.products
     else
