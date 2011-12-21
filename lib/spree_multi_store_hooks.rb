@@ -46,6 +46,7 @@ Deface::Override.new(
   :replace => "[data-hook='additional_tracker_fields']",
   :partial => "admin/trackers/store",
   :disabled => false)
+
 =begin #####wuyu: move to admin tab
 Deface::Override.new(
   :virtual_path => "admin/configurations/index",
@@ -54,6 +55,7 @@ Deface::Override.new(
   :text => "<%= configurations_menu_item(I18n.t('stores_admin'), admin_stores_url, I18n.t('manage_stores')) %>",
   :disabled => false)
 =end
+
 Deface::Override.new(
   :virtual_path => "layouts/admin",
   :name => "multi_store_admin_tab",

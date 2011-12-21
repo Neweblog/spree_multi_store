@@ -20,3 +20,8 @@ Tracker.class_eval do
     trackers.select { |t| t.store_id == Store.current(domain).try(:id) }.first
   end
 end
+
+User.class_eval do
+  has_and_belongs_to_many :stores
+  scope :by_store, lambda {|store| joins(:stores).where("stores_users.store_id = ?", store)}
+end

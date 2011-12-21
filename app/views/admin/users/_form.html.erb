@@ -32,3 +32,10 @@
     </p>
   </div>
 <% end %>
+
+<p>
+  <%= f.label :stores, t("stores")%><br />
+  <% Store.all.each do |store| %>
+    <%= check_box_tag "user[store_ids][]", store.id, @user.stores.include?(store) %> <%= store.name %>
+  <% end %>
+</p>
