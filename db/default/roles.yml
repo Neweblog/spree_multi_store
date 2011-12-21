@@ -1,0 +1,5 @@
+store_owner_role:
+  name: store_owner
+
+store_assistant_role:
+  name: store_assistant
