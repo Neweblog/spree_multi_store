@@ -34,6 +34,6 @@
 <% end %>
 
 <p>
-  <%= f.label :name, t("store") %> <span class="required">*</span><br />
+  <%= f.label :name, t("store") %><br />
   <%= collection_select :user, :store_id, Store.all, :id, :name, {:include_blank => t(:all)}  %>
 </p>
