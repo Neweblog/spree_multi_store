@@ -34,8 +34,6 @@
 <% end %>
 
 <p>
-  <%= f.label :stores, t("stores")%><br />
-  <% Store.all.each do |store| %>
-    <%= check_box_tag "user[store_ids][]", store.id, @user.stores.include?(store) %> <%= store.name %>
-  <% end %>
+  <%= f.label :name, t("store") %> <span class="required">*</span><br />
+  <%= collection_select :user, :store_id, Store.all, :id, :name, {:include_blank => t(:all)}  %>
 </p>
