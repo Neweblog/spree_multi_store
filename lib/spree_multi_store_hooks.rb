@@ -62,3 +62,17 @@ Deface::Override.new(
   :insert_bottom => "[data-hook='admin_tabs']",
   :text => "<%= tab(:stores) %>",
   :disabled => false)
+
+Deface::Override.new(
+  :virtual_path => "admin/users/index",
+  :name => "multi_store_admin_users_index_headers",
+  :insert_before => "[data-hook='admin_users_index_headers'] th:last",
+  :text => "<th><%= sort_link @search,:store_id, t(:store), {}, {:title => 'users_store_title'} %></th>",
+  :disabled => false)
+
+Deface::Override.new(
+  :virtual_path => "admin/users/index",
+  :name => "multi_store_admin_users_index_rows",
+  :insert_before => "[data-hook='admin_users_index_rows'] td:last",
+  :partial => "admin/users/index_rows",
+  :disabled => false)
