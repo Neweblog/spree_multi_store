@@ -67,7 +67,8 @@ Deface::Override.new(
   :virtual_path => "admin/users/index",
   :name => "multi_store_admin_users_index_headers",
   :insert_before => "[data-hook='admin_users_index_headers'] th:last",
-  :text => "<th><%= sort_link @search,:store_id, t(:store), {}, {:title => 'users_store_title'} %></th>",
+  :text => "<th><%= sort_link @search,:store_id, t(:store), {}, {:title => 'users_store_title'} %></th>
+  <th><%= t(:roles) %></th>",
   :disabled => false)
 
 Deface::Override.new(
