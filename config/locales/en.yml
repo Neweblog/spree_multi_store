@@ -7,3 +7,4 @@ en:
   manage_stores: Configure multiple stores and associated domain names
   editing_store: Editing Store
   default: Default
+  none_select_error: You must at least select select one
