@@ -1,6 +1,6 @@
 <td><%= !user.store ? t(:all) : user.store.name %></td>
 <td>
-	<% Role.find(:all).each do |role| %>
+	<% Role.order('position').each do |role| %>
         <%= role.name if user.has_role?(role.name) %>
     <% end %>
 </td>

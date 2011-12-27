@@ -25,3 +25,10 @@ User.class_eval do
   belongs_to :store
   attr_accessible :store_id
 end
+
+Role.class_eval do
+  before_save :add_position
+  def add_position
+    self.position = Role.find(:all).size+1 unless self.position?
+  end
+end

@@ -1,0 +1,10 @@
+zh:
+  store: 店铺
+  stores: 店铺
+  new_store: 新店
+  domains: 域名
+  stores_admin: 店铺管理
+  manage_stores: 多店多域名设置
+  editing_store: 编辑店铺
+  default: 默认
+  none_select_error: 至少应该选择一个

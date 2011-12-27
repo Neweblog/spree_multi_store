@@ -1,7 +1,7 @@
 <% content_for :head do %>
   <%= javascript_include_tag params[:controller] %>
 <% end %>
-<%= hidden_field_tag "NoneSelectErrorMessage", I18n.t(:none_select_error)+" "+t(:store) %>
+<%= hidden_field_tag "NoneSelectErrorMessage", t(:none_select_error)+" "+t(:stores) %>
 
 <div data-hook="admin_user_form_fields">
   <%= f.field_container :email do %>
