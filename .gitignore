@@ -1,0 +1,8 @@
+.DS_Store
+Gemfile.lock
+log/*
+tmp/*
+vendor/*
+db/*
+bin
+.bundle
